@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Object> a = new ArrayList<>();
+        a.add(1);
+        a.add(12.04);
+        a.add('K');
+        System.out.println(a);
+        a.add("Kavi");
+        System.out.println(a);
+        a.add(0, 5);
+         System.out.println(a);
+        a.set(3, "True");
+         System.out.println(a);
+        a.remove(1);
+        System.out.println(a);
+
+        System.out.println(a.get(2));
+         System.out.println(a);
+        System.out.println(a.size());
+         System.out.println(a);
+        System.out.println(a.contains(2));
+         System.out.println(a);
+
+        ArrayList<Object> b = (ArrayList<Object>) a.clone();
+
+        System.out.println(b);
+    }
+}

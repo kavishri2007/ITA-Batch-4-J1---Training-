@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        // Count frequency
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+        }
+
+        // Find first non-repeating character
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (map.get(ch) == 1) {
+                System.out.println("First Non-Repeating Character: " + ch);
+                return;
+            }
+        }
+
+        System.out.println("No Non-Repeating Character");
+    }
+}

@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int o1, o2, o3, o4, o5;
+
+        while (true) {
+            System.out.print("Enter the rating for order 1: ");
+            o1 = sc.nextInt();
+
+            if (o1 >= 1 && o1 <= 5)
+                break;
+
+            System.out.println("Invalid rating! Please enter a rating between 1 and 5.");
+        }
+
+        while (true) {
+            System.out.print("Enter the rating for order 2: ");
+            o2 = sc.nextInt();
+
+            if (o2 >= 1 && o2 <= 5)
+                break;
+
+            System.out.println("Invalid rating! Please enter a rating between 1 and 5.");
+        }
+
+        while (true) {
+            System.out.print("Enter the rating for order 3: ");
+            o3 = sc.nextInt();
+
+            if (o3 >= 1 && o3 <= 5)
+                break;
+
+            System.out.println("Invalid rating! Please enter a rating between 1 and 5.");
+        }
+
+        while (true) {
+            System.out.print("Enter the rating for order 4: ");
+            o4 = sc.nextInt();
+
+            if (o4 >= 1 && o4 <= 5)
+                break;
+
+            System.out.println("Invalid rating! Please enter a rating between 1 and 5.");
+        }
+
+        while (true) {
+            System.out.print("Enter the rating for order 5: ");
+            o5 = sc.nextInt();
+
+            if (o5 >= 1 && o5 <= 5)
+                break;
+
+            System.out.println("Invalid rating! Please enter a rating between 1 and 5.");
+        }
+
+        double avg = (o1 + o2 + o3 + o4 + o5) / 5.0;
+
+        if (avg >= 3.8) {
+            System.out.println("\nYou are eligible.");
+        } else {
+            System.out.println("\nYou are not eligible.");
+        }
+
+        sc.close();
+    }
+}

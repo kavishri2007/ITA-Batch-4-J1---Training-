@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main {
+    public static void main(String args[]) {
+
+        Scanner ar = new Scanner(System.in);
+
+        int size = ar.nextInt();
+        int arr[] = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            arr[i] = ar.nextInt();
+        }
+
+        int min = arr[0];
+
+        for (int i = 1; i < size; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+
+        System.out.println("Minimum element " + min);
+    }
+}

@@ -1,0 +1,34 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner ar = new Scanner(System.in);
+
+        int[] arr = new int[15];
+
+        System.out.print("Enter number of elements: ");
+        int n = ar.nextInt();
+
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = ar.nextInt();
+        }
+
+        System.out.print("Enter element A to search: ");
+        int A = ar.nextInt();
+
+        int pos = -1;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == A) {
+                pos = i;
+                break;
+            }
+        }
+
+        if (pos != -1)
+            System.out.println((pos + 1) + " is present in the array");
+        else
+            System.out.println("The number is not present ");
+    }
+}

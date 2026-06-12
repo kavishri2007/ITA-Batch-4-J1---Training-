@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        String s1 = "Java";
+        String s2 = "Hello";
+        String s3 = "JAVA";
+        String s4 ="java";
+        String s5 = "  hello java  ";
+        System.out.println(s1.length());
+        System.out.println(s2 + " " + s1);
+        System.out.println(s2.charAt(3));
+        System.out.println(s1.equals(s2));
+        System.out.println(s4.toUpperCase());
+        System.out.println(s3.toLowerCase());
+        System.out.println(s3.substring(3));
+        System.out.println(s2.replace('l','x'));
+        System.out.println(s1.contains("hello"));
+        System.out.println(s5.trim());
+        System.out.println(s1.indexOf('v'));
+        System.out.println(s1.lastIndexOf('a'));
+        String rev = new StringBuilder(s1).reverse().toString();
+        System.out.println(rev);
+        String s = "Banana";
+        int first = s.indexOf('a');
+        int second= s .indexOf('a',first + 1);
+        int third = s.indexOf('a',second + 1);
+        System.out.println(second);
+        System.out.println(third);
+        
+    }
+    
+}

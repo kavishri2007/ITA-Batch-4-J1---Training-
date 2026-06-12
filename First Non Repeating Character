@@ -7,8 +7,6 @@ public class Main {
         String str = sc.nextLine();
 
         HashMap<Character, Integer> map = new HashMap<>();
-
-        // Count frequency
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
 
@@ -18,8 +16,6 @@ public class Main {
                 map.put(ch, 1);
             }
         }
-
-        // Find first non-repeating character
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
 

@@ -1,0 +1,7 @@
+public class Main {
+     public static void main(String[]args){
+          char ch ='A';
+          ch = (ch >='A')?(char)(ch + 32):ch;
+          System.out.println(ch);
+     }
+}

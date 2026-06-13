@@ -6,29 +6,18 @@ public class Main {
         int[] arr1 = {1, 2, 3, 2};
         int[] arr2 = {2, 1, 2, 3};
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
 
-        for (int num : arr1) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-        }
+        for (int x : arr1)
+            map1.put(x, map1.getOrDefault(x, 0) + 1);
 
-        for (int num : arr2) {
-            if (!map.containsKey(num)) {
-                System.out.println("Not Equal");
-                return;
-            }
+        for (int x : arr2)
+            map2.put(x, map2.getOrDefault(x, 0) + 1);
 
-            map.put(num, map.get(num) - 1);
-
-            if (map.get(num) == 0) {
-                map.remove(num);
-            }
-        }
-
-        if (map.isEmpty()) {
+        if (map1.equals(map2))
             System.out.println("Equal");
-        } else {
+        else
             System.out.println("Not Equal");
-        }
     }
 }

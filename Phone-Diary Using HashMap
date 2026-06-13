@@ -1,0 +1,9 @@
+import java.util.*;
+public class Main{
+public static void main(String[]args){
+HashMap<String,String>PhoneBook = new HashMap<>();
+PhoneBook.put("Kavi","6456783443");
+PhoneBook.put("Anu","8976545688");
+System.out.println("Kavi");
+}
+}

@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr1 = {1, 2, 3, 2};
+        int[] arr2 = {2, 1, 2, 3};
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int num : arr1) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        for (int num : arr2) {
+            if (!map.containsKey(num)) {
+                System.out.println("Not Equal");
+                return;
+            }
+
+            map.put(num, map.get(num) - 1);
+
+            if (map.get(num) == 0) {
+                map.remove(num);
+            }
+        }
+
+        if (map.isEmpty()) {
+            System.out.println("Equal");
+        } else {
+            System.out.println("Not Equal");
+        }
+    }
+}
